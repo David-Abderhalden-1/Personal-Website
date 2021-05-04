@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto:wght@300;400&display=swap');
+*{
+    /*Remove Default*/
+    padding: 0px;
+    margin: 0px;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+html{
+    /*Global Settings*/
+    height: 100%;
+}
+
+body{
+    /*Scale Settings*/
+    min-height: 100%;
+}
+
+div#grid{
+    /*Scale Settings*/
+    height: 100vh;
+
+    /*Grid Settings*/
+    display: grid;
+    grid-template-columns: 70% auto;
+    grid-template-rows: 15% 75% auto;
+    grid-template-areas: 
+    "nav nav"
+    "body right"
+    "foot foot"
+    ;
+}
+
+/*GRID CONTENT*/
+/*========================================================================================*/
+
+/*Navigation*/
+/*----------------------------------------------------------------------------------------*/
+#grid div#grid-nav{
+    /*Grid Settings*/
+    grid-area: nav;
+
+    /*Flex-box Settings*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    /*Style Settings*/
+    padding: 3%;
+    background-color: white;
+    border-top: 8px solid rgb(32, 32, 32);
+    border-bottom: 0.5px solid gray;
+}
+
+#grid-nav div#heading{
+    width: 550px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#grid-nav div#heading h1{
+    font-family: 'Orbitron', sans-serif;
+    font-size: 25pt;
+    color: rgb(32, 32, 32);
+}
+
+#grid-nav div#heading #nav-logo:hover{
+    box-shadow: 3px 3px 3px gray;
+    height: 105px;
+    width: 105px;
+}
+
+#grid-nav ul#nav-sec-menu{
+    width: 200px;
+    height: 100px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+}
+
+#grid-nav ul#nav-sec-menu li.layer_1{
+    padding: 15px;
+    width: 120px;
+    text-align: center;
+    font-size: 15pt;
+    font-family: 'RocknRoll One', sans-serif;
+    border: 0.5px solid gray;
+    box-shadow: 1px 1px 1px rgb(211, 211, 211);
+    transition: background-color 0.5s;
+    position: relative;
+}
+
+#grid-nav ul#nav-sec-menu li.layer_1:hover{
+    cursor: pointer;
+    background-color: rgb(206, 206, 206);
+}
+
+#grid-nav ul#nav-sec-menu li.layer_1.active{
+    background-color: rgb(206, 206, 206);
+}
+
+ul.dropdown{
+    display: none;
+    width: 100%;
+    text-align: center;
+    left: 0%;
+    top: 100%;
+    border: 0.5px solid gray;
+    background-color: white;
+}
+
+ul.dropdown.active{
+    display: block;
+    list-style: none;
+    position: absolute;
+}
+
+ul.dropdown li.layer_2{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: 2px;
+    font-size: 13pt;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(255, 255, 255);
+    border-top: 0.5px solid gray;
+}
+
+ul.dropdown li:hover{
+    background-color: rgb(206, 206, 206);
+}
+
+/*----------------------------------------------------------------------------------------*/
+
+#grid div#grid-right{
+    /*Grid Settings*/
+    grid-area: right;
+
+    /*Style Settings*/
+    background-color: rgb(196, 196, 196);
+}
+
+#grid div#grid-body{
+    /*Grid Settings*/
+    grid-area: body;
+
+    /*Style Settings*/
+    background-color: rgb(255, 255, 255);
+    border-right: 0.5px solid rgb(187, 187, 187);
+    overflow: hidden;
+}
+
+#chategories #list-chategories{
+    display: flex;
+    justify-content: space-between;
+}
+
+#list-chategories li.sector{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    height: 70px;
+    list-style: none;
+    border-bottom: 1px solid gray;
+    background-color: rgb(248, 248, 248);
+    font-size: 13pt;
+    color: black;
+    padding: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-family: "Roboto";
+    /*box-shadow:          0 0 0px #000000;*/
+    cursor: pointer;
+
+}
+#list-chategories li.sector:hover{
+    /*box-shadow:          0 0 5px #000000;*/
+    background-color: rgb(221, 221, 221);
+    cursor: pointer;
+}
+
+#list-chategories li.sector.active{
+    /*box-shadow:          0 0 5px #000000;*/
+    background-color: rgb(221, 221, 221);
+    border-bottom: 1px solid rgb(221, 221, 221);
+    cursor: pointer;
+}
+
+div.switcher{
+    display: none;
+    width: 98.3%;
+    height: 85.4%;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    /*box-shadow:          0 0 5px #000000;*/
+    background-color: rgb(221, 221, 221);
+}
+
+div.switcher.active{
+    display: block;
+}
+
+#grid div#grid-foot{
+    /*Grid Settings*/
+    grid-area: foot;
+
+    /*Style Settings*/
+    border-top: 0.5px solid gray;
+    background-color: rgb(99, 99, 99);
+}
+/*========================================================================================*/
+

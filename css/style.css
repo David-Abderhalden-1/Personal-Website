@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Roboto:wght@300;400&display=swap');
+*{
+    /*Remove Default*/
+    padding: 0px;
+    margin: 0px;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+html{
+    /*Global Settings*/
+    height: 100%;
+}
+
+body{
+    /*Scale Settings*/
+    min-height: 100%;
+}
+
+div#grid{
+    /*Scale Settings*/
+    height: 100vh;
+
+    /*Grid Settings*/
+    display: grid;
+    grid-template-columns: auto 75% auto;
+    grid-template-rows: 15% 75% auto;
+    grid-template-areas: 
+    "nav nav nav"
+    "left body right"
+    "foot foot foot"
+    ;
+}
+
+/*GRID CONTENT*/
+/*========================================================================================*/
+
+/*Navigation*/
+/*----------------------------------------------------------------------------------------*/
+#grid div#grid-nav{
+    /*Grid Settings*/
+    grid-area: nav;
+
+    /*Flex-box Settings*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    /*Style Settings*/
+    padding: 3%;
+    background-color: white;
+    border-top: 8px solid rgb(87, 104, 255);
+    border-bottom: 0.5px solid gray;
+}
+
+#grid-nav div#heading{
+    width: 800px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#grid-nav div#heading h1{
+    font-family: 'Orbitron', sans-serif;
+    font-size: 25pt;
+    color: rgb(87, 104, 255);
+}
+
+#grid-nav div#heading #nav-logo{
+    /*Display Settings*/
+    transition: box-shadow 0.5s, width 0.5s, height 0.5s;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    border: 0.5px solid gray;
+    background-image: url(../docs/img/profil.jpg);
+    background-size: contain;
+    background-position-y: 0px;
+    box-shadow: 2px 2px 2px gray;
+}
+
+#grid-nav div#heading #nav-logo:hover{
+    box-shadow: 3px 3px 3px gray;
+    height: 105px;
+    width: 105px;
+}
+
+#grid-nav ul#nav-sec-menu{
+    width: 700px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+
+#grid-nav ul#nav-sec-menu li.layer_1{
+    padding: 15px;
+    width: 120px;
+    text-align: center;
+    font-size: 15pt;
+    font-family: 'RocknRoll One', sans-serif;
+    border: 0.5px solid gray;
+    box-shadow: 1px 1px 1px rgb(211, 211, 211);
+    transition: background-color 0.5s;
+    position: relative;
+}
+
+#grid-nav ul#nav-sec-menu li.layer_1:hover{
+    cursor: pointer;
+    background-color: rgb(181, 213, 255);
+}
+
+#grid-nav ul#nav-sec-menu li.layer_1.active{
+    background-color: rgb(181, 213, 255);
+}
+
+ul.dropdown{
+    display: none;
+    width: 100%;
+    text-align: center;
+    left: 0%;
+    top: 100%;
+    border: 0.5px solid gray;
+    background-color: white;
+}
+
+ul.dropdown.active{
+    display: block;
+    list-style: none;
+    position: absolute;
+}
+
+ul.dropdown li.layer_2{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: 2px;
+    font-size: 13pt;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(255, 255, 255);
+    border-top: 0.5px solid gray;
+}
+
+ul.dropdown li:hover{
+    background-color: rgb(181, 213, 255);
+}
+
+ul.new{
+    display: none;
+    width: 100%;
+    text-align: center;
+    left: -105%;
+    top: 35%;
+    border: 0.5px solid gray;
+    background-color: white;
+}
+ul.new.active{
+    display: block;
+    list-style: none;
+    position: absolute;
+}
+#nav-sec-menu li.layer_2.active{
+    background-color: rgb(181, 213, 255);
+}
+
+ul.dropdown li.layer_3{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: 2px;
+    font-size: 13pt;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    background-color: rgb(181, 213, 255);
+}
+
+ul.dropdown li.layer_3:hover{
+    background-color: rgb(144, 188, 255);
+}
+
+/*----------------------------------------------------------------------------------------*/
+
+#grid div#grid-left{
+    /*Grid Settings*/
+    grid-area: left;
+
+    /*Style Settings*/
+    background-image: linear-gradient(rgb(226, 239, 255), rgb(255, 255, 255));
+
+}
+
+#grid div#grid-right{
+    /*Grid Settings*/
+    grid-area: right;
+
+    /*Style Settings*/
+    background-image: linear-gradient(rgb(226, 239, 255), rgb(255, 255, 255));
+}
+
+#grid div#grid-body{
+    /*Grid Settings*/
+    grid-area: body;
+
+    /*Style Settings*/
+    background-color: rgb(255, 255, 255);
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-left: 0.5px solid rgb(187, 187, 187);
+    border-right: 0.5px solid rgb(187, 187, 187);
+}
+
+#grid div#grid-foot{
+    /*Grid Settings*/
+    grid-area: foot;
+
+    /*Style Settings*/
+    border-top: 0.5px solid gray;
+    background-image: linear-gradient(rgb(130, 180, 255), rgb(113, 139, 255));
+}
+/*========================================================================================*/
+
